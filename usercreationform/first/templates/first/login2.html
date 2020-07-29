@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>login</h1>
+    {% if messages%}
+    {% for msg in messages%}
+    <h2>{{msg}}</h2>
+    {% endfor %}
+    {% endif %}
+    <form class="" action="/first/login2/" method="POST">
+      {% csrf_token %}
+      username: <input type="text" name="username" value=""><br><br>
+      password: <input type="password" name="password" value=""><br><br>
+      <button type="submit" name="button">login</button>
+    </form>
+  </body>
+</html>

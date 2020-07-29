@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>user logged in successfully</h1>
+    <form class="" action="/first/logout/" method="get">
+      <button type="submit" name="button">logout</button>
+    </form>
+    <hr>
+    {% for x in imgs%}
+    <img src="{{x.image.url}}" alt="">
+    <h2>{{x.summary}}</h2>
+    <hr>
+    {% endfor %}
+  </body>
+</html>

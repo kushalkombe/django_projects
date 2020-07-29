@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>name</th>
+        <th>salary</th>
+        <th>company</th>
+        <th><button type="button" name="button">delete</button></th>
+      </thead>
+      {% for x in obj %}
+      <tr>
+        <td>{{x.name}}</td>
+        <td>{{x.salary}}</td>
+        <td>{{x.company}}</td>
+        <td><form class="" action="/first/delete/{{x.id}}/" method = 'get'>
+          <button type="submit" name="button">delete</button>
+        </form></td>
+        <td><form class="" action="/first/update/{{x.id}}/" method = 'get'>
+          <button type="submit" name="button">update</button>
+        </form></td>
+      </tr>
+      {% endfor %}
+    </table>
+  <form class="" action="/first/add/" method="get">
+    <button type="submit" name="button">add EMP</button>  
+
+  </form>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'apptwo/base.html' %}
+{% block body %}
+  <body>
+    <form method="post">
+    {% csrf_token %}
+     {{form.as_p}}
+    <button type="submit" name="button">register</button>
+</form>
+  </body>
+  {% endblock %}
+</html>

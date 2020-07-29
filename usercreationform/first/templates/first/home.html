@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>user_registration form</h1>
+    {% if messages %}
+    {% for msg in messages%}
+    <h2>{{msg}}</h2>
+    {% endfor%}
+    {% endif %}
+    <form class="" action="/first/user/" method="POST">
+      {% csrf_token%}
+
+      {{form|crispy}}
+      <button type="submit" name="button">save</button>
+    </form>
+  </body>
+</html>

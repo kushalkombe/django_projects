@@ -1,0 +1,39 @@
+{% extends 'apptwo/base.html' %}
+{% block body %}
+  <body>
+    <h1>this is view for student</h1><br>
+    <table border="2">
+    <thead>
+      <th>student Username</th>
+      <th>student NAME</th>
+      <th>student password</th>
+      <th>student address</th>
+      <th>student email</th>
+      <th>student number</th>
+      <th>student batch</th>
+      <th>ACTION</th>
+    </thead>
+      {% for x in obj %}
+      <tr>
+        <td>{{x.suname}}</td>
+        <td>{{x.sname}}</td>
+        <td>{{x.spassword}}</td>
+        <td>{{x.saddress}}</td>
+        <td>{{x.semail}}</td>
+        <td>{{x.snumber}}</td>
+        <td>{{x.sbatch}}</td>
+        <td>
+          <a href="/supdate/{{x.pk}}/" class="btn btn-primary btn-lg">update</a>
+          <a href="/sdelete/{{x.pk}}/" class='btn btn-lg btn-danger'>delete</a>
+      </td>
+      </tr>
+      {% endfor %}
+      <a href="/bcreate/"><button type="button" class="btn btn-success">ADD BATCH</button></a>&nbsp&nbsp&nbsp
+      <a href="/ccreate/"><button type="button" class="btn btn-success">ADD COURSE</button></a>&nbsp&nbsp&nbsp
+      <a href="/fcreate/"><button type="button" class="btn btn-success">ADD FACULTY</button></a>&nbsp&nbsp&nbsp
+      <a href="/screate/"><button type="button" class="btn btn-success">ADD STUDENT</button></a>&nbsp&nbsp&nbsp
+      <a href="/home/"><button type="button" class="btn btn-success">ADMIN LOGOUT</button></a><br><br><br>
+      </table><br><br><br
+  </body>
+  {% endblock %}
+</html>

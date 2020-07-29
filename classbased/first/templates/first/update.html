@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <form class="" action="/first/update/{{obj.id}}/" method="post">
+    {% csrf_token %}
+    name: <input type="text" name="name" value="{{obj.name}}"><br><br>
+    salary: <input type="text" name="salary" value="{{obj.salary}}"><br><br>
+    company: <input type="text" name="company" value="{{obj.company}}"><br><br>
+   <button type="submit" name="button">update</button>
+  </form>
+  </body>
+</html>

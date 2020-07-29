@@ -1,0 +1,12 @@
+{% extends 'apptwo/base.html' %}
+{% block body %}
+  <body>
+    <h1> Welcome student view</h1><br>
+    <h3> Available courses Are</h3><br>
+    {% for x in course_list %}
+     <a href="/course/{{x.id}}/">{{x.cname}}</a><br><br><br>
+    {% endfor %}
+      <button type="button" name="button">Get Study Matrial</button>
+  </body>
+  {% endblock %}
+</html>

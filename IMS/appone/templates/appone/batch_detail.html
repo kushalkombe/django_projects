@@ -1,0 +1,14 @@
+{% extends 'apptwo/base.html' %}
+{% block body %}
+  <body>
+    <h3>batch No.:-{{batch.bno}}</h3><br>
+    <h3>batch max_strength:-{{batch.max_strength}}</h3><br>
+    <h3>batch available_strength:-{{batch.available_strength}}</h3>
+    <h3>batch start date:-{{batch.date_from}}</h3><br>
+    <p><a href="/media/{{ file }}" download>{{Studymaterial.slug}}</a></p>
+<form class="" action="/authlogout/" method="GET">
+  <button type="submit" name="button">student_logout</button>
+</form>
+  </body>
+  {% endblock %}
+</html>

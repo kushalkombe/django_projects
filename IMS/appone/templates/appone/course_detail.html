@@ -1,0 +1,14 @@
+{% extends 'apptwo/base.html' %}
+{% block body %}
+  </head>
+  <body>
+    <h3>course name:-{{course.cname}}</h3><br>
+    <h3>course duration:-{{course.duration}}</h3><br>
+    <h3>course fees:-{{course.fees}}</h3>
+    <p><a href="/media/{{ file }}" download>{{Studymaterial.slug}}</a></p>
+<form class="" action="/authlogout/" method="GET">
+  <button type="submit" name="button">student_logout</button>
+</form>
+  </body>
+  {% endblock %}
+</html>

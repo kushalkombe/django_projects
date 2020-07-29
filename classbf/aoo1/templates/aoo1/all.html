@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>name</th>
+        <th>marks</th>
+
+        </thead>
+        <tr>
+        {% for x in obj %}
+        <td>{{x.name}}</td>
+        <td>{{x.marks}}</td>
+
+        <td><form class="" action="/one/delete/{{x.id}}/" method="get">
+        <button type="submit" name="button">delete</button>
+        </form></td>
+        <td><form class="" action="/one/update/{{x.id}}/" method="get">
+        <button type="submit" name="">update</button>
+        </form></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <form class="" action="/one/add/" method="GET">
+      <button type="submit" name="">add student</button>
+    </form>
+
+  </body>
+</html>
