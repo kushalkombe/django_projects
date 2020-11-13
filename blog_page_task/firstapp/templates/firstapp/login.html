@@ -1,0 +1,17 @@
+{% extends 'firstapp/base.html'%}
+{% block body %}
+{% load crispy_forms_tags %}
+<br><br>
+    <form class="" action="/success/" method="post">
+            {% csrf_token %}
+
+{{form|crispy}}<br><br>
+      <button type="submit" name="button">login</button>
+
+    </form>
+<br><br>
+    <form class="" action="/home/" method="post">
+      {% csrf_token %}
+      <button type="submit" name="button">new user register</button>
+    </form>
+{% endblock %}

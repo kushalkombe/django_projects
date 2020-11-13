@@ -1,0 +1,52 @@
+{% extends 'firstapp/base.html'%}
+{% block body %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table style="width:100%">
+      <thead>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Content</th>
+        <th>Created_on</th>
+
+      </thead>
+        <tr>
+        {% for x in obj %}
+
+        <td>{{x.title}}</td>
+        <td>{{x.author}}</td>
+        <td>{{x.content}}</td>
+        <td>{{x.created_on }}</td>&nbsp;
+
+
+
+
+        <td><form class="" action="/delete/{{x.id}}/" method="get">
+        <button type="submit" name="button">delete</button>
+        </form></td>
+        <td><form class="" action="/update/{{x.id}}/" method="get">
+        <button type="submit" name="">update</button>
+        </form></td>
+      </tr>
+      {% endfor %}
+    </table><br><br>
+    <form class="" action="/add/" method="GET">
+      <button type="submit" name="">ADD POST</button>
+    </form>
+<br><br>
+    <form class="" action="/logout/" method="get">
+
+      <button type="submit" name="button">logout</button>
+
+    </form>
+  </body>
+</html>
+{% endblock %}
